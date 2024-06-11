@@ -5,18 +5,21 @@ const services = [
     name: 'Matcha-lmond Latte',
     description:
       'This delicious drink is a combination of some matcha green tea, fresh almond milk, and a touch of honey.',
+    imageUrl: '/assets/ml.jpeg',  // Add the image URL here
   },
   {
     step: '02',
     name: 'Orange is the New Black',
     description:
-      'This drink adds a twist to the classic orange juice by adding a touch of blackcurrant. ',
+      'This drink adds a twist to the classic orange juice by adding a touch of blackcurrant.',
+    imageUrl: '/assets/orange-black.jpg',  // Add the image URL here
   },
   {
     step: '03',
     name: 'Maple Cinnamon Latte',
     description:
       'This drink is a combination of some espresso, steamed milk, and a touch of maple syrup and cinnamon.',
+    imageUrl: '/assets/maple-cinnamon-latte.jpg',  // Add the image URL here
   },
 ];
 ---
@@ -30,6 +33,11 @@ const services = [
           services.map((service) => (
             <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
               <p class="text-sm">{service.step}</p>
+              <img
+                class="w-full h-auto rounded-3xl"
+                src={service.imageUrl}
+                alt={service.name}
+              />
               <div class="flex flex-col gap-4">
                 <h3 class="text-xl font-medium">{service.name}</h3>
                 <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
