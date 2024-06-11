@@ -50,26 +50,6 @@ const bottomLinks = [
       },
     ],
   },
-  {
-    header: 'Legal',
-    links: [
-      {
-        name: 'Privacy',
-        href: '/privacy',
-        isExternal: false,
-      },
-      {
-        name: '404',
-        href: '/404',
-        isExternal: false,
-      },
-      {
-        name: 'Styleguide',
-        href: '/styleguide',
-        isExternal: false,
-      },
-    ],
-  },
 ];
 ---
 
@@ -88,9 +68,9 @@ const bottomLinks = [
           :src="$store.theme.isDark ? '/assets/logo-inverted.svg' : '/assets/logo.svg'"
           alt="Stone"
         />
-        <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
-          Designed by Webstax
-        </p>
+        <a href="https://main--webstaxx.netlify.app/" class="text-primary-950/70 dark:text-primary-200/70 text-base">
+          Designed by webstax
+        </a>
         <p class="text-primary-950/70 dark:text-primary-200/70 text-sm">© 2024 Kohe- The Koffee Shop</p>
       </div>
 
