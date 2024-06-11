@@ -1,6 +1,6 @@
-# Stone: Astro Theme
+# Kohe: The Coffee Shop
 
-Stone is a free and open-source Astro theme specially designed for Business, Marketing, SaaS and Startup websites.
+Kohe is a website designed and hosted by Webstax using Astro, Tailwind CSS, and Netlify for Kohe- The Koffee Shop in Jubilee Hills, Hyderabad
 
 ## Key Features:
 
