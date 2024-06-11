@@ -1,3 +1,7 @@
+---
+import 'lazysizes';
+---
+
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col gap-16">
@@ -17,13 +21,25 @@
           View Our Menu
         </a>
       </div>
-      <img
-        class="h-auto w-full rounded-3xl"
-        width="1280"
-        height="640"
-        src="/assets/hero.mp4"
-        alt="Hero picture"
-      />
+      <div class="hero-video">
+        <video
+          class="lazyload h-auto w-full rounded-3xl"
+          width="1280"
+          height="640"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="/assets/hero-poster.jpg"
+          data-src="/assets/hero.mp4"
+        >
+          <source data-src="/assets/hero.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
 </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
