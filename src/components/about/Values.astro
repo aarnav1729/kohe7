@@ -1,59 +1,38 @@
----
-const values = [
-  [
-    {
-      ref: '01',
-      name: 'Excellence',
-      description:
-        'At Kohe, we strive for excellence in everything we do. We believe that excellence is not a destination but a journey of continuous improvement. We are committed to delivering high-quality products and services that exceed our customers’ expectations. We are dedicated to providing our employees with the tools and resources they need to excel in their roles. We are passionate about creating a culture of excellence that inspires our employees to reach their full potential.',
-    },
-    {
-      ref: '02',
-      name: 'Innovation',
-      description:
-        'Here at Kohe, our expert baristas are encouraged to innovate and come up with their own signature blends. We believe that innovation is the key to success in the coffee industry. We are constantly experimenting with new brewing techniques and flavor combinations to create unique and exciting coffee experiences for our customers. We are committed to staying ahead of the curve and pushing the boundaries of what is possible in the world of coffee. We are passionate about sharing our love of coffee with the world and inspiring others to think outside the box.',
-    },
-  ],
-  [
-    {
-      ref: '03',
-      name: 'Teamwork',
-      description:
-        'Kohe was founded on the principles of teamwork and collaboration. We believe that by working together, we can achieve great things. We are committed to creating a supportive and inclusive work environment where all employees feel valued and respected. We are dedicated to fostering a culture of teamwork that encourages open communication, trust, and mutual respect. We are passionate about building strong relationships with our employees, customers, and partners to create a sense of community and belonging. We believe that by working together, we can achieve our goals and create a better future for everyone.',
-    },
-    {
-      ref: '04',
-      name: 'Respect',
-      description:
-        'At Kohe, we believe that respect is the foundation of all successful relationships. We are committed to treating our employees, customers, and partners with respect and dignity. We are dedicated to creating a safe and inclusive work environment where everyone feels welcome and valued. We are passionate about fostering a culture of respect that celebrates diversity and promotes equality. We believe that by showing respect to others, we can create a positive and supportive community that benefits everyone. We are committed to upholding the highest standards of integrity and ethics in everything we do. We are dedicated to building trust and credibility with our employees, customers, and partners through honest and transparent communication. We are passionate about doing the right thing, even when it is difficult, and holding ourselves accountable for our actions. We believe that by acting with integrity, we can earn the trust and respect of others and build strong and lasting relationships.',
-    },
-  ],
-];
----
-
-<section class="py-16 sm:py-20">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-8 lg:gap-12">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Our Values</h2>
-      <div class="grid gap-8 lg:grid-cols-2">
-        {
-          values.map((column, index) => (
-            <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
-              {column.map((value) => (
-                <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
-                  <p class="text-sm">{value.ref}</p>
-                  <div class="flex flex-col gap-4">
-                    <h3 class="text-xl font-medium">{value.name}</h3>
-                    <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-                      {value.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          ))
-        }
-      </div>
+<section class="gallery">
+  <div class="container">
+    <div class="images">
+      <img src="/path/to/image7.jpg" alt="Image 7" />
+      <img src="/path/to/image8.jpg" alt="Image 8" />
+      <img src="/path/to/image9.jpg" alt="Image 9" />
+    </div>
+    <div class="videos">
+      <video controls>
+        <source src="/path/to/video5.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video controls>
+        <source src="/path/to/video6.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </section>
+
+<style>
+  .gallery {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .images img, .videos video {
+    margin: 1rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .images, .videos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

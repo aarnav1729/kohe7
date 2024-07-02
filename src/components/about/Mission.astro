@@ -1,82 +1,39 @@
----
-const stats = [
-  {
-    name: 'Years',
-    value: '9',
-  },
-  {
-    name: 'Expert Baristas',
-    value: '15',
-  },
-  {
-    name: 'Perfect Cups of Coffee',
-    value: '122000',
-  },
-  {
-    name: 'Kohe',
-    value: "'1'",
-  },
-];
----
-
-<section class="py-16 sm:py-20">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
-      <img
-        class="mx-auto h-auto w-full max-w-xl rounded-3xl"
-        width="576"
-        height="864"
-        src="/assets/about.webp"
-        alt="Our experts working together"
-      />
-      <div class="flex flex-col gap-10">
-        <!-- Mission description -->
-        <div class="space-y-8 sm:space-y-12">
-          <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Our mission</h2>
-          <div class="space-y-6">
-            <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-              At Kohe- The Koffee Shop, we believe that everyone deserves a good cup of coffee. We 
-              are committed to providing the best coffee experience to our customers accompanied by
-              unpretentious vibes and outstanding customer service. We are dedicated to sourcing
-              the best coffee beans from around the world and roasting them to perfection. Our
-              state of the art equipment and highly trained baristas ensure that every cup of
-              coffee is brewed to perfection. We are passionate about coffee and we want to share
-              that passion with you every time you visit us.
-            </p>
-            <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-              Our mission is to provide a warm and welcoming environment where you can relax and
-              enjoy a delicious cup of coffee. We want to be your go-to spot for coffee and we
-              strive to make every visit a memorable one. Whether you are looking for a quick
-              pick-me-up or a place to unwind, we have you covered. Our team is dedicated to
-              providing you with the best coffee experience possible and we are always looking for
-              ways to improve. We are committed to excellence and we are always looking for ways to
-              exceed your expectations.
-            </p>
-            <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-              We are passionate about coffee and we want to share that passion with you. We are
-              committed to providing you with the best coffee experience possible and we are always
-              looking for ways to improve. We are dedicated to sourcing the best coffee beans from
-              around the world and roasting them to perfection. Our state of the art equipment and
-              highly trained baristas ensure that every cup of coffee is brewed to perfection. We
-              are committed to excellence and we are always looking for ways to exceed your
-              expectations. We are dedicated to providing you with the best coffee experience
-              possible and we are always looking for ways to improve. We are passionate about coffee
-              and we want to share that passion with you.
-          </div>
-        </div>
-
-        <!-- Stats -->
-        <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {
-            stats.map((stat) => (
-              <div class="border-primary-900/10 dark:border-primary-300/10 rounded-3xl border p-6">
-                <dt class="text-base">{stat.name}</dt>
-                <dd class="text-3xl font-medium tracking-tight">{stat.value}</dd>
-              </div>
-            ))
-          }
-        </dl>
-      </div>
+<section class="gallery">
+  <div class="container">
+    <h2>Gallery</h2>
+    <div class="images">
+      <img src="../../../public/assets/" alt="Image 1" />
+      <img src="/path/to/image2.jpg" alt="Image 2" />
+      <img src="/path/to/image3.jpg" alt="Image 3" />
+    </div>
+    <div class="videos">
+      <video controls>
+        <source src="../../../public/assets/v1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video controls>
+        <source src="/path/to/video2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </section>
+
+<style>
+  .gallery {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .images img, .videos video {
+    margin: 1rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .images, .videos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>
